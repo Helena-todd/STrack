@@ -13,7 +13,12 @@ Once you have completed the installation, you can lauch the Docker Desktop App
 
 #### Step 2: Dowlnoad docker-STrack on your computer
 
+Open a command line:
+- **On Mac:** you will find it in your Applications/Utilities/Terminal
+- **On Windows:** you will find it by typing "Command Prompt" in the Power User Menu
 
+Type:
+    git
 
 
 
