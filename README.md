@@ -6,8 +6,8 @@ To facilitate the installation and reproducible usability of STrack, we made a d
 
 #### Step 1: Install the Docker Desktop App
 
-- **On Mac:** You will find the download link and instructions on this website: [Docker Desktop Mac](https://docs.docker.com/desktop/mac/install/)
-- **On Windows:** You will find the download link and instructions on this website: [Docker Desktop Windows](https://docs.docker.com/desktop/windows/install/)
+- **On Mac:** You will find the download link and instructions on this website: [Docker Desktop Mac install](https://docs.docker.com/desktop/mac/install/)
+- **On Windows:** You will find the download link and instructions on this website: [Docker Desktop Windows install](https://docs.docker.com/desktop/windows/install/)
 
 Once you have completed the installation, you can lauch the Docker Desktop App
 
@@ -25,9 +25,12 @@ Open a command line:
 - **On Mac:** you will find it in your Applications/Utilities/Terminal
 - **On Windows:** you will find it by typing "Command Prompt" in the Power User Menu
 
-Move to the STrack directory on your computer by typing:
+Move to the STrack/Docker_structure directory on your computer by typing "cd" followed by the path to the directory:
 - **On Mac:** 
-    git
+> cd /Users/Helena/Documents/STrack/Docker_structure
+- **On Windows:** 
+> cd C:\Users\Helena\Documents\STrack\Docker_structure
+
 
 
 
