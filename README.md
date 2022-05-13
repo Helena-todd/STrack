@@ -34,7 +34,7 @@ Move to the STrack/Docker_structure directory on your computer by typing "cd" fo
 > cd path_to_STrack/Docker_structure_directory
 (e.g. cd /Users/Helena/Documents/STrack/Docker_structure)
 - **On Windows:** 
-> cd path_to_STrack/Docker_structure_directory
+> cd path_to_STrack\Docker_structure_directory
 (e.g. cd C:\Users\Helena\Documents\STrack\Docker_structure)
 
 Build the image by typing:
