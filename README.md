@@ -1,7 +1,5 @@
 # STrack: a tool to Simply Track cells in your timelapse images
 
-<img src="https://github.com/Helena-todd/STrack/blob/master/cell_tracking.png" width="500" height="300">
-
 <p align="center">
   <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/cell_tracking.png">
 </p>
