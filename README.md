@@ -58,7 +58,7 @@ Now that you have built the docker-STrack image, you can use it to track cells i
 (e.g. docker run -v /Users/Helena/Documents/STrack/test_images/:/home/test_images/ strack /home/test_images/ 50 30)
 - **On Windows:** 
 > docker run -v path_to_test_images:/home/test_images/ strack /home/test_images/ 50 30
-(e.g. docker run -v C:\Users\Helena\Documents\STrack\Docker_structure\:/home/test_images/ strack /home/test_images/ 50 30)
+(e.g. docker run -v C:\Users\Helena\Documents\STrack\test_images\:/home/test_images/ strack /home/test_images/ 50 30)
 
 The -v option allows you to couple a folder on your local computer to a folder in the docker image. STrack's results will thus be directly outputted in the path you provided, in an /STrack subfolder.
 
