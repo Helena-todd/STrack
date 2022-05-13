@@ -1,8 +1,6 @@
 # STrack: a tool to Simply Track cells in your timelapse images
 
-![Cell tracking](https://github.com/Helena-todd/STrack/cell_tracking.png)
-![Cell tracking](https://github.com/Helena-todd/STrack/blob/master/cell_tracking.png?raw=true | width=100)
-<img src="https://github.com/Helena-todd/STrack/blob/master/cell_tracking.png" width="100" height="100">
+<img src="https://github.com/Helena-todd/STrack/blob/master/cell_tracking.png" width="800" height="600">
 
 To facilitate the installation and reproducible usability of STrack, we made a docker version of the package.
 
