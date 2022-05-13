@@ -27,9 +27,41 @@ Open a command line:
 
 Move to the STrack/Docker_structure directory on your computer by typing "cd" followed by the path to the directory:
 - **On Mac:** 
-> cd /Users/Helena/Documents/STrack/Docker_structure
+> cd path_to_STrack/Docker_structure_directory
+(e.g. cd /Users/Helena/Documents/STrack/Docker_structure)
 - **On Windows:** 
-> cd C:\Users\Helena\Documents\STrack\Docker_structure
+> cd path_to_STrack/Docker_structure_directory
+(e.g. cd C:\Users\Helena\Documents\STrack\Docker_structure)
+
+Build the image by typing:
+> docker build . –t strack
+
+The docker App should now start building the docker image on your computer. 
+(if not, make sure that you did not forget to launch the Docker Desktop App)
+
+After a while, (this process can take a few minutes), all the steps should be completed. Your STrack docker image is now ready to use!
+
+#### Step 4: Use docker-STrack to track cells in the test images
+
+STrack takes 3 parameters as input:
+- the path to the segmented images
+- the maximum distance to look for descendance in a cell's surrounding (we set this maximum distance to 50 pixels)
+- the maximum angle allowed for cell division (we set this maximum angle to 30°)
+
+Now that you have built the docker-STrack image, you can use it to track cells in images, by typing:
+- **On Mac:** 
+> docker run -v path_to_test_images:/home/test_images/ strack /home/test_images/ 50 30
+(e.g. docker run -v /Users/Helena/Documents/STrack/test_images/:/home/test_images/ strack /home/test_images/ 50 30)
+- **On Windows:** 
+> docker run -v path_to_test_images:/home/test_images/ strack /home/test_images/ 50 30
+(e.g. docker run -v C:\Users\Helena\Documents\STrack\Docker_structure\:/home/test_images/ strack /home/test_images/ 50 30)
+
+The -v option allows you to couple a folder on your local computer to a folder in the docker image. STrack's results will thus be directly outputted in the path you provided, in an /STrack subfolder.
+
+After running the docker run command, a new STrack subfolder will be generated, that contains STrack's results. For each image - 1 (the cells in the 1st image cannot be tracked by definition), STrack returns:
+- a CSV table, that contains the links from cells in the previous to cells in the current image
+- a PNG image, in which these links are represented as red lines
+
 
 
 
