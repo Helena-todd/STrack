@@ -2,6 +2,10 @@
 
 <img src="https://github.com/Helena-todd/STrack/blob/master/cell_tracking.png" width="500" height="300">
 
+<p align="center">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/cell_tracking.png">
+</p>
+
 To facilitate the installation and reproducible usability of STrack, we made a docker version of the package.
 
 ### Here's a user-friendly step-by-step protocol to track cells in your images using docker-STrack:
