@@ -1,6 +1,8 @@
 # STrack: a tool to Simply Track cells in your timelapse images
 
-![Cell tracking](/Volumes/T7/cell_tracking.png)
+<p align="center">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/cell_tracking.png">
+</p>
 
 To facilitate the installation and reproducible usability of STrack, we made a docker version of the package.
 
@@ -64,7 +66,9 @@ After running the docker run command, a new STrack subfolder will be generated, 
 - a CSV table, that contains the links from cells in the previous to cells in the current image
 - a PNG image, in which these links are represented as red lines
 
+#### Step 5: Use docker-STrack to track cells in your own images
 
+You can either replace the images in the test_images folder by your own segmented images, or provide a different path in the "docker run" command. Always make sure that your image directory contains an /exported sub-folder with the images that you wish to apply STrack on.
 
 
 
