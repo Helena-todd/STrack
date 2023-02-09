@@ -21,7 +21,7 @@ In the docker Desktop App, <br />
 (2) Type "helenatodd/strack"
 
 <p align="center">
-  <img width="1000" height="600" src="https://github.com/Helena-todd/STrack/blob/master/readme_images/search_helenatodd_strack.png">
+  <img width="1000" height="500" src="https://github.com/Helena-todd/STrack/blob/master/readme_images/search_helenatodd_strack.png">
 </p>
 
 (1) Then click on "Images" and <br />
