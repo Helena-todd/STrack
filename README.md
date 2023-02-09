@@ -19,13 +19,13 @@ Once you have completed the installation, you can launch the Docker Desktop App
 In the docker Desktop App, click on the "Search" bar and type "helenatodd/strack":
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/search_helenatodd_strack.png">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/readme_images/search_helenatodd_strack.png">
 </p>
 
 Then click on "Images" (1) and select the "helenatodd/strack:v1.1" docker image by clicking on it (2). Finally, click on the "Run" button to launch the interface that will allow you to launch STrack on your segmented images.
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/image_helenatodd_strack.png">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/readme_images/image_helenatodd_strack.png">
 </p>
 
 Note: On this github page, we provided a few images from a timelapse that you can use as test images for STrack. In order to find them, scroll up to the top of this page and click on the green "Code" button and on "Download zip". The zipped folder that you will download contains a /test_images subfolder, containing cell masks that we obtained by using Omnipose (Kevin J. Cutler et al, 2021, [Omnipose](https://github.com/kevinjohncutler/omnipose.git)). You can of course use the segmentation tool of your choice to generate segmentation masks on your own images.
@@ -35,7 +35,7 @@ Note: On this github page, we provided a few images from a timelapse that you ca
 First, click on "Optional settings" to access the settings of STrack (1):
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/optsettings_helenatodd_strack.png">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/readme_images/optsettings_helenatodd_strack.png">
 </p>
 
 You can now define the STrack parameters:
@@ -47,7 +47,7 @@ You can now define the STrack parameters:
 (6) Click on the "+" button to enter a second parameter
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/run_helenatodd_strack.png">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/readme_images/run_helenatodd_strack.png">
 </p>
 
 You can then provide information on the second STrack parameter:
@@ -56,7 +56,7 @@ You can then provide information on the second STrack parameter:
 (3) Finally, you can hit the "Run" button to launch STrack on your data
 
 <p align="center">
-  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/run_helenatodd_strack2.png">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/readme_images/run_helenatodd_strack2.png">
 </p>
 
 #### STrack results
