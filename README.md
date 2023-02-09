@@ -6,69 +6,64 @@
 
 To facilitate the installation and reproducible usability of STrack, we made a docker version of the package.
 
-### Here's a user-friendly step-by-step protocol to track cells in your images using docker-STrack:
+### Here's a user-friendly step-by-step protocol to track cells in your images using STrack:
 
 #### Step 1: Install the Docker Desktop App
 
-- **On Mac:** You will find the download link and instructions on this website: [Docker Desktop Mac install](https://docs.docker.com/desktop/mac/install/)
-- **On Windows:** You will find the download link and instructions on this website: [Docker Desktop Windows install](https://docs.docker.com/desktop/windows/install/)
+- **On Mac, Windows and Linux:** You will find the download link and instructions on this website: [Docker Desktop install](https://www.docker.com/products/docker-desktop/)
 
-Once you have completed the installation, you can lauch the Docker Desktop App
+Once you have completed the installation, you can launch the Docker Desktop App
 
-#### Step 2: Dowlnoad docker-STrack on your computer
+#### Step 2: Search for the helenatodd/strack image from the Docker Desktop App
 
-Git clone or download the Helena-todd/STrack repository.
+In the docker Desktop App, click on the "Search" bar and type "helenatodd/strack":
 
-You should now have an STrack folder on your computer. This folder contains:
-- A Docker_structure sub-folder. Everything necessary to build the STrack docker image is stored there.
-- A test_images/exported subfolder. We provided a few images from a timelapse to help you test STrack. These images contain cell masks, which we obtained by using Omnipose (Kevin J. Cutler et al, 2021, [Omnipose](https://github.com/kevinjohncutler/omnipose.git)). You can of course use the segmentation tool of your choice to generate segmentation masks.
+<p align="center">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/search_helenatodd_strack.png">
+</p>
 
-#### Step 3: Build the STrack docker image on your computer
+Then click on "Images" (1) and select the "helenatodd/strack:v1.1" docker image by clicking on it (2). Finally, click on the "Run" button to launch the interface that will allow you to launch STrack on your segmented images.
 
-Open a command line:
-- **On Mac:** you will find it in your Applications/Utilities/Terminal
-- **On Windows:** you will find it by typing "Command Prompt" in the Power User Menu
+<p align="center">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/image_helenatodd_strack.png">
+</p>
 
-Move to the STrack/Docker_structure directory on your computer by typing "cd" followed by the path to the directory:
-- **On Mac:** 
-> cd path_to_STrack/Docker_structure_directory
-(e.g. cd /Users/Helena/Documents/STrack/Docker_structure)
-- **On Windows:** 
-> cd path_to_STrack\Docker_structure_directory
-(e.g. cd C:\Users\Helena\Documents\STrack\Docker_structure)
+Note: On this github page, we provided a few images from a timelapse that you can use as test images for STrack. In order to find them, scroll up to the top of this page and click on the green "Code" button and on "Download zip". The zipped folder that you will download contains a /test_images subfolder, containing cell masks that we obtained by using Omnipose (Kevin J. Cutler et al, 2021, [Omnipose](https://github.com/kevinjohncutler/omnipose.git)). You can of course use the segmentation tool of your choice to generate segmentation masks on your own images.
 
-Build the image by typing:
-> docker build . –t strack
+#### Step 3: Run STrack on your images
 
-The docker App should now start building the docker image on your computer. 
-(if not, make sure that you did not forget to launch the Docker Desktop App)
+First, click on "Optional settings" to access the settings of STrack (1):
 
-After a while, (this process can take a few minutes), all the steps should be completed. Your STrack docker image is now ready to use!
+<p align="center">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/optsettings_helenatodd_strack.png">
+</p>
 
-#### Step 4: Use docker-STrack to track cells in the test images
+You can now define the STrack parameters:
+(1) The first box can stay empty, it allows you to give a name to the container that will be launched, but docker will give it a default name if you don't.
+(2) By clicking on those three dots, you will be able to browse into the folder containing the segmented images in which you wish to track cells using STrack (or into the /test_images folder that we provided)
+(3) Type "/home/test_images/" in this box
+(4) Type "MAXDIST" in this box. This will allow you to define the maximum distance to look for descendance in a cell's surrounding 
+(5) Type the maximum distance value you wish to set (as an example, we set this maximum distance to 50 pixels)
+(6) Click on the "+" button to enter a second parameter
 
-STrack takes 3 parameters as input:
-- the path to the segmented images
-- the maximum distance to look for descendance in a cell's surrounding (we set this maximum distance to 50 pixels)
-- the maximum angle allowed for cell division (we set this maximum angle to 30°)
+<p align="center">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/run_helenatodd_strack.png">
+</p>
 
-Now that you have built the docker-STrack image, you can use it to track cells in images, by typing:
-- **On Mac:** 
-> docker run -v path_to_test_images:/home/test_images/ strack /home/test_images/ 50 30
-(e.g. docker run -v /Users/Helena/Documents/STrack/test_images/:/home/test_images/ strack /home/test_images/ 50 30)
-- **On Windows:** 
-> docker run -v path_to_test_images:/home/test_images/ strack /home/test_images/ 50 30
-(e.g. docker run -v C:\Users\Helena\Documents\STrack\test_images\\:/home/test_images/ strack /home/test_images/ 50 30)
+You can then provide information on the second STrack parameter:
+(1) Type "MAXANGLE" in this box. This will allow you to define the maximum angle allowed for cell division
+(2) Type the maximum angle value you wish to set (as an example, we set this maximum angle to 30°)
+(3) Finally, you can hit the "Run" button to launch STrack on your data
 
-The -v option allows you to couple a folder on your local computer to a folder in the docker image. STrack's results will thus be directly outputted in the path you provided, in an /STrack subfolder.
+<p align="center">
+  <img width="500" height="300" src="https://github.com/Helena-todd/STrack/blob/master/run_helenatodd_strack2.png">
+</p>
 
-After running the docker run command, a new STrack subfolder will be generated, that contains STrack's results. For each image - 1 (the cells in the 1st image cannot be tracked by definition), STrack returns:
+#### STrack results
+
+After running STrack on your segmented images, a new STrack subfolder will be generated in the folder where your images are located, that contains STrack's results. For each image - 1 (the cells in the 1st image cannot be tracked by definition), STrack returns:
 - a CSV table, that contains the links from cells in the previous to cells in the current image
 - a PNG image, in which these links are represented as red lines
-
-#### Step 5: Use docker-STrack to track cells in your own images
-
-You can either replace the images in the test_images folder by your own segmented images, or provide a different path in the "docker run" command. Always make sure that your image directory contains an /exported sub-folder with the images that you wish to apply STrack on.
 
 
 
