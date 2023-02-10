@@ -6,6 +6,8 @@
 
 To facilitate the installation and reproducible usability of STrack, we made a docker version of the package.
 
+*Note: On this github page, we provided a few images from a timelapse that you can use as test images for STrack. In order to find them, scroll up to the top of this page and click on the green "Code" button and on "Download zip". The zipped folder that you will download contains a /test_images subfolder, containing cell masks that we obtained by using Omnipose (Kevin J. Cutler et al, 2021, [Omnipose](https://github.com/kevinjohncutler/omnipose.git)). You can of course use the segmentation tool of your choice to generate segmentation masks on your own images.*
+
 ## Here's a user-friendly step-by-step protocol to track cells in your images using STrack:
 
 ### Step 1: Install the Docker Desktop App
@@ -33,8 +35,6 @@ In the docker Desktop App, <br />
 <p align="center">
   <img width="1000" height="500" src="https://github.com/Helena-todd/STrack/blob/master/readme_images/image_helenatodd_strack.png">
 </p>
-
-*Note: On this github page, we provided a few images from a timelapse that you can use as test images for STrack. In order to find them, scroll up to the top of this page and click on the green "Code" button and on "Download zip". The zipped folder that you will download contains a /test_images subfolder, containing cell masks that we obtained by using Omnipose (Kevin J. Cutler et al, 2021, [Omnipose](https://github.com/kevinjohncutler/omnipose.git)). You can of course use the segmentation tool of your choice to generate segmentation masks on your own images.*
 
 ### Step 3: Run STrack on your images
 
