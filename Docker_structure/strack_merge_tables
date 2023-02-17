@@ -1,0 +1,40 @@
+import pandas as pd
+import os
+import glob
+import sys
+
+output_dir = sys.argv[1]
+os.chdir(output_dir)
+
+# List files in current folder
+files_list = sorted(glob.glob("*.csv"), key=os.path.getmtime) # order files by time of creation
+
+# merge tables into one big panda dataframe
+df_append = pd.DataFrame()
+#append all files together
+for file in files_list:
+    df_temp = pd.read_csv(file)
+    df_append = df_append.append(df_temp, ignore_index=True)
+
+# loop over the tables rows and modify mother and daughter mask IDs
+# such that they are fit for building a graph
+stocked_IDs = {}
+incremental_ID = 1
+
+for i, row in df_append.iterrows():
+    # change mother iD
+    coords_tmp = f"{row.Centroid_x_mother},{row.Centroid_y_mother}"
+    if coords_tmp not in stocked_IDs.keys():
+        stocked_IDs[coords_tmp] = incremental_ID
+        incremental_ID += 1
+    df_append['Mother_mask'][i] = stocked_IDs[coords_tmp]
+    
+    # change daughter ID
+    coords_tmp_d = f"{row.Centroid_x},{row.Centroid_y}"
+    if coords_tmp_d not in stocked_IDs.keys():
+        stocked_IDs[coords_tmp_d] = incremental_ID
+        incremental_ID += 1
+    df_append['Mask_nb'][i] = stocked_IDs[coords_tmp_d]
+
+# Export the final panda dataframe in csv format
+df_append.to_csv(output_dir + "complete_tracking_table.csv")
