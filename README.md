@@ -75,7 +75,7 @@ STrack will also return two additional csv files:
 - the "complete_tracking_table" contains tracks from all timepoints combined
 - the "tracked_cells_table" contains information on cells from all timpoints combined
 
-These two last CSV files can be used to import STrack's results into an open source software for visualizing and editing networks. We provide a tutorial on how to import STrack's results into Cytoscape, and how to visualise and/or edit the tracks, here: <a href="https://github.com/Helena-todd/STrack/blob/master/Tutorial.pdf">my text</a>
+These two last CSV files can be used to import STrack's results into an open source software for visualizing and editing networks. We provide a tutorial on how to import STrack's results into Cytoscape, and how to visualise and/or edit the tracks, here: <a href="https://github.com/Helena-todd/STrack/blob/master/tutorial.pdf">Strack Cytoscape tutorial</a>
 
 
 
