@@ -71,11 +71,11 @@ After running STrack on your segmented images, a new STrack subfolder will be ge
 - a CSV table, that contains the links from cells in the previous to cells in the current image <br />
 - a PNG image, in which these links are represented as red lines
 
-STrack will also return two additional csv files:
+STrack will also return two additional excel formatted files:
 - the "complete_tracking_table" contains tracks from all timepoints combined
 - the "tracked_cells_table" contains information on cells from all timpoints combined
 
-These two last CSV files can be used to import STrack's results into an open source software for visualizing and editing networks. We provide a tutorial on how to import STrack's results into Cytoscape, and how to visualise and/or edit the tracks, here: <a href="https://github.com/Helena-todd/STrack/blob/master/tutorial.pdf">Strack Cytoscape tutorial</a>
+These two last XLSX files can be used to import STrack's results into an open source software for visualizing and editing networks. We provide a tutorial on how to import STrack's results into Cytoscape, and how to visualise and/or edit the tracks, here: <a href="https://github.com/Helena-todd/STrack/blob/master/tutorial.pdf">Strack Cytoscape tutorial</a>
 
 
 
